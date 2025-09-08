@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Saiba Mais - Novo Aparelho</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inclua os dois arquivos CSS existentes -->
+    <link rel="stylesheet" href="sonege.css">
+    
+ <style>
+        body {
+            font-family: 'Frutiger Aero', Arial, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            margin: 60px auto 0 auto;
+            background: rgba(255,255,255,0.7);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            padding: 40px 32px;
+            backdrop-filter: blur(8px);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #0077b6;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #222;
+            line-height: 1.7;
+        }
+        .glass-btn {
+            display: inline-block;
+            margin: 24px 12px 0 0;
+            padding: 14px 36px;
+            font-size: 1.1rem;
+            font-family: inherit;
+            color: #0077b6;
+            background: rgba(255,255,255,0.35);
+            border: none;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(6px);
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+        }
+        .glass-btn:hover {
+            background: rgba(0,119,182,0.15);
+            color: #023e8a;
+            box-shadow: 0 6px 32px 0 rgba(31, 38, 135, 0.22);
+        }
+        /* Botões flutuantes */
+        .floating-btns {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            z-index: 100;
+        }
+        .floating-btn {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.35);
+            border-radius: 50%;
+            box-shadow: 0 4px 24px 0 rgba(31, 38, 135, 0.15);
+            backdrop-filter: blur(6px);
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .floating-btn:hover {
+            background: rgba(0,119,182,0.18);
+            box-shadow: 0 6px 32px 0 rgba(31, 38, 135, 0.22);
+        }
+        .floating-btn svg {
+            width: 28px;
+            height: 28px;
+            fill: #0077b6;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 8px;
+            }
+            .floating-btns {
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Saiba Mais Sobre o Novo Aparelho</h1>
+        <p>
+            O novo aparelho inovador da EletroBras foi desenvolvido para proporcionar eficiência energética, praticidade e design moderno para sua casa. Com tecnologia de ponta, ele oferece recursos inteligentes, conectividade avançada e baixo consumo de energia, tornando-se a escolha ideal para quem busca sustentabilidade sem abrir mão do conforto.
+        </p>
+        <p>
+            Entre seus principais diferenciais estão o controle remoto via aplicativo, integração com assistentes virtuais e sensores automáticos que otimizam o funcionamento conforme o ambiente. Seu acabamento premium e interface intuitiva garantem uma experiência única para todos os usuários.
+        </p>
+        <a href="index.html" class="glass-btn">Voltar ao Início</a>
+        <a href="compra.html" class="glass-btn">compra</a>
+    </div>
+
+    <!-- Botões flutuantes estilo glass -->
+    <div class="floating-btns">
+        <button class="floating-btn" title="Voltar ao topo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+            <!-- Ícone seta para cima -->
+            <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h6v8h4v-8h6z"/></svg>
+        </button>
+        <a href="contato.html" class="floating-btn" title="Contato">
+            <!-- Ícone de mensagem -->
+            <svg viewBox="0 0 24 24"><path d="M21 6.5a2.5 2.5 0 0 0-2.5-2.5h-13A2.5 2.5 0 0 0 3 6.5v11A2.5 2.5 0 0 0 5.5 20h13a2.5 2.5 0 0 0 2.5-2.5v-11zm-2.5-.5a.5.5 0 0 1 .5.5v.379l-8 5.333-8-5.333V6.5a.5.5 0 0 1 .5-.5h13zm.5 12a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V8.121l7.5 5 7.5-5V18z"/></svg>
+        </a>
+    </div>
+</body>
+</html>

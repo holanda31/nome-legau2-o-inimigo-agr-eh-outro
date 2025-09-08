@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --glass-bg: rgba(255,255,255,0.25);
+    --glass-blur: blur(12px);
+    --accent: #f84600;
+    --accent2: #cc6b0a;
+    --text: #ffffff;
+    --radius: 18px;
+    --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #3f3d3b 0%, #a06308 100%);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow);
+    border-radius: 0 0 var(--radius) var(--radius);
+    padding: 2rem 2rem 1rem 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    padding: 0.6em 1.4em;
+    border-radius: var(--radius);
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow);
+    transition: background 0.2s, color 0.2s;
+    border: 1px solid rgba(0,191,255,0.08);
+}
+
+nav a:hover, .botao-comprar:hover {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: #a78f09;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.produto-destaque {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    max-width: 370px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.produto-destaque h2 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.produto-destaque img {
+    border-radius: var(--radius);
+    margin-bottom: 1.2rem;
+    box-shadow: 0 4px 16px 0 rgba(0,191,255,0.10);
+}
+
+.produto-destaque ul {
+    text-align: left;
+    margin: 1.2rem 0;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.produto-destaque p {
+    margin: 1rem 0;
+    font-size: 1.05rem;
+}
+
+.botao-comprar {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.8em 2em;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--glass-bg);
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    backdrop-filter: var(--glass-blur);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    border: 1px solid rgba(0,191,255,0.12);
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem 0;
+    background: transparent;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Floating glass buttons (bottom right) */
+.fab-group {
+    position: fixed;
+    bottom: 2.2rem;
+    right: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    z-index: 100;
+}
+
+.fab-btn {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow);
+    border: 1.5px solid rgba(0,191,255,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.fab-btn:hover {
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: #fff;
+    transform: scale(1.08);
+}
+
+@media (max-width: 600px) {
+    .produto-destaque {
+        padding: 1.2rem 0.5rem;
+        max-width: 98vw;
+    }
+    header {
+        padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+    }
+    .fab-group {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
